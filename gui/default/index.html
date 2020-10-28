@@ -463,13 +463,13 @@
                       <th><span class="fas fa-fw fa-share-alt"></span>&nbsp;<span translate>Shared With</span></th>
                       <td class="text-right" ng-attr-title="{{sharesFolder(folder)}}">{{sharesFolder(folder)}}</td>
                     </tr>
-                    <tr ng-if="folderStats[folder.id].lastScan">
+                    <!--<tr ng-if="folderStats[folder.id].lastScan">
                       <th><span class="far fa-fw fa-clock"></span>&nbsp;<span translate>Last Scan</span></th>
                       <td translate ng-if="folderStats[folder.id].lastScanDays >= 365" class="text-right">Never</td>
                       <td ng-if="folderStats[folder.id].lastScanDays < 365" class="text-right">
                         <span>{{folderStats[folder.id].lastScan | date:'yyyy-MM-dd HH:mm:ss'}}</span>
                       </td>
-                    </tr>
+                    </tr>-->
                     <tr ng-if="folder.type != 'sendonly' && folderStats[folder.id].lastFile && folderStats[folder.id].lastFile.filename">
                       <th><span class="fas fa-fw fa-exchange-alt"></span>&nbsp;<span translate>Latest Change</span></th>
                       <td class="text-right">
