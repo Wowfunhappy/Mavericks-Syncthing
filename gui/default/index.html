@@ -63,7 +63,7 @@
           <ul class="dropdown-menu">
             <li><a href="" ng-click="editSettings()"><span class="fas fa-fw fa-cog"></span>&nbsp;<span translate>Settings</span></a></li>
             <li><a href="" data-toggle="modal" data-target="#idqr" ng-click="currentDevice=thisDevice()"><span class="fas fa-fw fa-qrcode"></span>&nbsp;<span translate>Show ID</span></a></li>
-            <li class="divider" aria-hidden="true"></li>
+            <!--<li class="divider" aria-hidden="true"></li>
             <li><a href="" ng-click="shutdown()"><span class="fas fa-fw fa-power-off"></span>&nbsp;<span translate>Shutdown</span></a></li>
             <li><a href="" ng-click="restart()"><span class="fas fa-fw fa-refresh"></span>&nbsp;<span translate>Restart</span></a></li>
             <li class="divider" aria-hidden="true"></li>
@@ -76,7 +76,7 @@
             <li class="divider" aria-hidden="true"></li>
             <li><a href="" ng-click="advanced()"><span class="fas fa-fw fa-cogs"></span>&nbsp;<span translate>Advanced</span></a></li>
             <li><a href="" ng-click="logging.show()"><span class="far fa-fw fa-file-alt"></span>&nbsp;<span translate>Logs</span></a></li>
-            <li class="divider" aria-hidden="true" ng-if="config.gui.debugging"></li>
+            <li class="divider" aria-hidden="true" ng-if="config.gui.debugging"></li>-->
             <li><a href="/rest/debug/support" target="_blank" ng-if="config.gui.debugging"><span class="fa fa-user-md"></span>&nbsp;<span translate>Support Bundle</span></a></li>
           </ul>
         </li>
@@ -347,7 +347,7 @@
                       <th><span class="fas fa-fw fa-exclamation-triangle"></span>&nbsp;<span translate>Error</span></th>
                       <td class="text-right">{{model[folder.id].invalid || model[folder.id].error}}</td>
                     </tr>
-                    <tr ng-if="!folder.paused">
+                    <!--<tr ng-if="!folder.paused">
                       <th><span class="fas fa-fw fa-globe"></span>&nbsp;<span translate>Global State</span></th>
                       <td class="text-right">
                         <span tooltip data-original-title="{{model[folder.id].globalFiles | alwaysNumber | localeNumber}} {{'files' | translate}}, {{model[folder.id].globalDirectories | alwaysNumber | localeNumber}} {{'directories' | translate}}, ~{{model[folder.id].globalBytes | binary}}B">
@@ -364,10 +364,10 @@
                           <span class="far fa-copy"></span>&nbsp;{{model[folder.id].localFiles | alwaysNumber | localeNumber}}&ensp;
                           <span class="far fa-folder"></span>&nbsp;{{model[folder.id].localDirectories | alwaysNumber | localeNumber}}&ensp;
                           <span class="far fa-hdd"></span>&nbsp;~{{model[folder.id].localBytes | binary}}B<!-- get rid of the annoying trailing whitespace
-                          --><span ng-if="model[folder.id].ignorePatterns"><br/><i><small translate class="text-muted">Reduced by ignore patterns</small></i></span>
+                          --*><span ng-if="model[folder.id].ignorePatterns"><br/><i><small translate class="text-muted">Reduced by ignore patterns</small></i></span>
                         </span>
                       </td>
-                    </tr>
+                    </tr>-->
                     <tr ng-if="model[folder.id].needTotalItems > 0">
                       <th><span class="fas fa-fw fa-cloud-download-alt"></span>&nbsp;<span translate>Out of Sync Items</span></th>
                       <td class="text-right">
@@ -406,7 +406,7 @@
                         <span translate>Yes</span>
                       </td>
                     </tr>
-                    <tr>
+                    <!--<tr>
                       <th><span class="fas fa-fw fa-refresh"></span>&nbsp;<span translate>Rescans</span></th>
                       <td class="text-right">
                         <div ng-if="folder.rescanIntervalS > 0">
@@ -438,8 +438,8 @@
                           </span>
                         </div>
                       </td>
-                    </tr>
-                    <tr ng-if="folder.order != 'random'">
+                    </tr>-->
+                    <!--<tr ng-if="folder.order != 'random'">
                       <th><span class="fas fa-fw fa-sort"></span>&nbsp;<span translate>File Pull Order</span></th>
                       <td class="text-right" ng-switch="folder.order">
                         <span ng-switch-when="random" translate>Random</span>
@@ -449,8 +449,8 @@
                         <span ng-switch-when="oldestFirst" translate>Oldest First</span>
                         <span ng-switch-when="newestFirst" translate>Newest First</span>
                       </td>
-                    </tr>
-                    <tr ng-if="folder.versioning.type">
+                    </tr>-->
+                    <!--<tr ng-if="folder.versioning.type">
                       <th><span class="far fa-fw fa-copy"></span>&nbsp;<span translate>File Versioning</span></th>
                       <td class="text-right" ng-switch="folder.versioning.type">
                         <span ng-switch-when="trashcan" translate>Trash Can File Versioning</span>
@@ -458,7 +458,7 @@
                         <span ng-switch-when="simple" translate>Simple File Versioning</span>
                         <span ng-switch-when="external" translate>External File Versioning</span>
                       </td>
-                    </tr>
+                    </tr>-->
                     <tr>
                       <th><span class="fas fa-fw fa-share-alt"></span>&nbsp;<span translate>Shared With</span></th>
                       <td class="text-right" ng-attr-title="{{sharesFolder(folder)}}">{{sharesFolder(folder)}}</td>
@@ -597,7 +597,7 @@
                     <th><span class="fas fa-fw fa-tachometer-alt"></span>&nbsp;<span translate>CPU Utilization</span></th>
                     <td class="text-right">{{system.cpuPercent | alwaysNumber | percent}}</td>
                   </tr>
-                  <tr>
+                  <!--<tr>
                     <th><span class="fas fa-fw fa-sitemap"></span>&nbsp;<span translate>Listeners</span></th>
                     <td class="text-right">
                       <span ng-if="listenersFailed.length == 0" class="data text-success">
@@ -609,8 +609,8 @@
                         </span>
                       </span>
                     </td>
-                  </tr>
-                  <tr ng-if="system.discoveryEnabled">
+                  </tr>-->
+                  <!--<tr ng-if="system.discoveryEnabled">
                     <th><span class="fas fa-fw fa-map-signs"></span>&nbsp;<span translate>Discovery</span></th>
                     <td class="text-right">
                       <span ng-if="discoveryFailed.length == 0" class="data text-success">
@@ -622,11 +622,11 @@
                         </span>
                       </span>
                     </td>
-                  </tr>
-                  <tr>
+                  </tr>-->
+                  <!--<tr>
                     <th><span class="far fa-fw fa-clock"></span>&nbsp;<span translate>Uptime</span></th>
                     <td class="text-right">{{system.uptime | duration:"m"}}</td>
-                  </tr>
+                  </tr>-->
                   <tr>
                     <th><span class="fas fa-fw fa-tag"></span>&nbsp;<span translate>Version</span></th>
                     <td class="text-right">

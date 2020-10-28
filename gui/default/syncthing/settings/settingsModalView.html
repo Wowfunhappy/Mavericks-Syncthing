@@ -3,8 +3,8 @@
     <form role="form" name="settingsEditor">
       <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#settings-general"><span class="fas fa-cog"></span> <span translate>General</span></a></li>
-        <li><a data-toggle="tab" href="#settings-gui"><span class="fas fa-desktop"></span> <span translate>GUI</span></a></li>
-        <li><a data-toggle="tab" href="#settings-connections"><span class="fas fa-sitemap"></span> <span translate>Connections</span></a></li>
+        <!--<li><a data-toggle="tab" href="#settings-gui"><span class="fas fa-desktop"></span> <span translate>GUI</span></a></li>-->
+        <!--<li><a data-toggle="tab" href="#settings-connections"><span class="fas fa-sitemap"></span> <span translate>Connections</span></a></li>-->
         <li>
           <a data-toggle="tab" href="#settings-ignored-devices">
             <span class="fas fa-laptop"></span>
@@ -66,14 +66,14 @@
             </div>
           </div>
 
-          <div class="row">
+          <!--<div class="row">
             <div class="col-md-6">
               <div class="form-group">
                 <label translate for="urVersion">Anonymous Usage Reporting</label> (<a href="" translate data-toggle="modal" data-target="#urPreview">Preview</a>)
                 <div ng-if="tmpOptions.upgrades != 'candidate' && !version.isCandidate">
                   <select class="form-control" id="urVersion" ng-model="tmpOptions._urAcceptedStr">
                     <option ng-repeat="n in urVersions()" value="{{n}}">{{'Version' | translate}} {{n}}</option>
-                    <!-- 1 does not exist, as we did not support incremental formats back then. -->
+                    <!-- 1 does not exist, as we did not support incremental formats back then. --*>
                     <option value="0" translate>Undecided (will prompt)</option>
                     <option value="-1" translate>Disabled</option>
                   </select>
@@ -99,7 +99,7 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div>-->
           <div class="form-group">
             <label translate for="urVersion">Default Folder Path</label>
             <input id="DefaultFolderPath" class="form-control" type="text" ng-model="tmpOptions.defaultFolderPath" />
