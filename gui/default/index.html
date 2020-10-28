@@ -589,14 +589,14 @@
                         </span>
                     </td>
                   </tr>
-                  <tr>
+                  <!--<tr>
                     <th><span class="fas fa-fw fa-microchip"></span>&nbsp;<span translate>RAM Utilization</span></th>
                     <td class="text-right">{{system.sys | binary}}B</td>
-                  </tr>
-                  <tr>
+                  </tr>-->
+                  <!--<tr>
                     <th><span class="fas fa-fw fa-tachometer-alt"></span>&nbsp;<span translate>CPU Utilization</span></th>
                     <td class="text-right">{{system.cpuPercent | alwaysNumber | percent}}</td>
-                  </tr>
+                  </tr>-->
                   <!--<tr>
                     <th><span class="fas fa-fw fa-sitemap"></span>&nbsp;<span translate>Listeners</span></th>
                     <td class="text-right">
@@ -627,12 +627,12 @@
                     <th><span class="far fa-fw fa-clock"></span>&nbsp;<span translate>Uptime</span></th>
                     <td class="text-right">{{system.uptime | duration:"m"}}</td>
                   </tr>-->
-                  <tr>
+                  <!--<tr>
                     <th><span class="fas fa-fw fa-tag"></span>&nbsp;<span translate>Version</span></th>
                     <td class="text-right">
                       <span tooltip data-original-title="{{versionString()}}">{{versionString()}}</span>
                     </td>
-                  </tr>
+                  </tr>-->
                 </tbody>
               </table>
             </div>
@@ -736,18 +736,18 @@
                         <span ng-if="deviceCfg.compression == 'never'" translate>Off</span>
                       </td>
                     </tr>
-                    <tr ng-if="deviceCfg.introducer">
+                    <!--<tr ng-if="deviceCfg.introducer">
                       <th><span class="far fa-fw fa-thumbs-up"></span>&nbsp;<span translate>Introducer</span></th>
                       <td translate class="text-right">Yes</td>
-                    </tr>
-                    <tr ng-if="deviceCfg.introducedBy">
+                    </tr>-->
+                    <!--<tr ng-if="deviceCfg.introducedBy">
                       <th><span class="far fa-fw fa-handshake-o"></span>&nbsp;<span translate>Introduced By</span></th>
                       <td class="text-right">{{ deviceName(findDevice(deviceCfg.introducedBy)) || deviceCfg.introducedBy.substring(0, 5) }}</td>
-                    </tr>
-                    <tr ng-if="connections[deviceCfg.deviceID].clientVersion">
+                    </tr>-->
+                    <!--<tr ng-if="connections[deviceCfg.deviceID].clientVersion">
                       <th><span class="fas fa-fw fa-tag"></span>&nbsp;<span translate>Version</span></th>
                       <td class="text-right">{{connections[deviceCfg.deviceID].clientVersion}}</td>
-                    </tr>
+                    </tr>-->
                     <tr ng-if="!connections[deviceCfg.deviceID].connected">
                       <th><span class="fas fa-fw fa-eye"></span>&nbsp;<span translate>Last seen</span></th>
                       <td translate ng-if="!deviceStats[deviceCfg.deviceID].lastSeenDays || deviceStats[deviceCfg.deviceID].lastSeenDays >= 365" class="text-right">Never</td>
