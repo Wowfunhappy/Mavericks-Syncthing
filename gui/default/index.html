@@ -547,7 +547,7 @@
             <div class="panel-body">
               <table class="table table-condensed table-striped table-auto">
                 <tbody>
-                  <tr>
+                  <!--<tr>
                     <th><span class="fas fa-fw fa-cloud-download-alt"></span>&nbsp;<span translate>Download Rate</span></th>
                     <td class="text-right">
                       <a href="#" class="toggler" ng-click="toggleUnits()">
@@ -562,8 +562,8 @@
                         </small>
                       </a>
                     </td>
-                  </tr>
-                  <tr>
+                  </tr>-->
+                  <!--<tr>
                     <th><span class="fas fa-fw fa-cloud-upload-alt"></span>&nbsp;<span translate>Upload Rate</span></th>
                     <td class="text-right">
                       <a href="#" class="toggler" ng-click="toggleUnits()">
@@ -578,8 +578,8 @@
                         </small>
                       </a>
                     </td>
-                  </tr>
-                  <tr>
+                  </tr>-->
+                  <!--<tr>
                     <th><span class="fas fa-fw fa-home"></span>&nbsp;<span translate>Local State (Total)</span></th>
                     <td class="text-right">
                         <span tooltip data-original-title="{{localStateTotal.files | alwaysNumber | localeNumber}} {{'files' | translate}}, {{ localStateTotal.directories | alwaysNumber | localeNumber}} {{'directories' | translate}}, ~{{ localStateTotal.bytes | binary}}B">
@@ -588,7 +588,7 @@
                           <span class="far fa-hdd"></span>&nbsp;~{{localStateTotal.bytes | binary}}B
                         </span>
                     </td>
-                  </tr>
+                  </tr>-->
                   <!--<tr>
                     <th><span class="fas fa-fw fa-microchip"></span>&nbsp;<span translate>RAM Utilization</span></th>
                     <td class="text-right">{{system.sys | binary}}B</td>
@@ -663,7 +663,7 @@
               <div class="panel-body">
                 <table class="table table-condensed table-striped table-auto">
                   <tbody>
-                    <tr ng-if="connections[deviceCfg.deviceID].connected">
+                    <!--<tr ng-if="connections[deviceCfg.deviceID].connected">
                       <th><span class="fas fa-fw fa-cloud-download-alt"></span>&nbsp;<span translate>Download Rate</span></th>
                       <td class="text-right">
                         <a href="#" class="toggler" ng-click="toggleUnits()">
@@ -678,8 +678,8 @@
                           </small>
                         </a>
                       </td>
-                    </tr>
-                    <tr ng-if="connections[deviceCfg.deviceID].connected">
+                    </tr>-->
+                    <!--<tr ng-if="connections[deviceCfg.deviceID].connected">
                       <th><span class="fas fa-fw fa-cloud-upload-alt"></span>&nbsp;<span translate>Upload Rate</span></th>
                       <td class="text-right">
                         <a href="#" class="toggler" ng-click="toggleUnits()">
@@ -694,14 +694,14 @@
                           </small>
                         </a>
                       </td>
-                    </tr>
+                    </tr>-->
                     <tr ng-if="deviceStatus(deviceCfg) == 'syncing'">
                       <th><span class="fas fa-fw fa-exchange-alt"></span>&nbsp;<span translate>Out of Sync Items</span></th>
                       <td class="text-right">
                         <a href="" ng-click="showRemoteNeed(deviceCfg)">{{completion[deviceCfg.deviceID]._needItems | alwaysNumber | localeNumber}} <span translate>items</span>, ~{{completion[deviceCfg.deviceID]._needBytes | binary}}B</a>
                       </td>
                     </tr>
-                    <tr>
+                    <!--<tr>
                       <th><span class="fas fa-fw fa-link"></span>&nbsp<span translate>Address</span></th>
                       <td ng-if="connections[deviceCfg.deviceID].connected" class="text-right">
                         <span tooltip data-original-title="{{ connections[deviceCfg.deviceID].type.indexOf('Relay') > -1 ? '' : connections[deviceCfg.deviceID].type }} {{ connections[deviceCfg.deviceID].crypto }}">
@@ -718,7 +718,7 @@
                           <small ng-if="system.lastDialStatus[addr].error" tooltip data-original-title="{{system.lastDialStatus[addr].error}}" class="text-danger">{{abbreviatedError(addr)}}<br></small>
                         </span>
                       </td>
-                    </tr>
+                    </tr>-->
                     <tr ng-if="connections[deviceCfg.deviceID].connected && connections[deviceCfg.deviceID].type.indexOf('Relay') > -1" tooltip data-original-title="Connections via relays might be rate limited by the relay">
                       <th><span class="fas fa-fw fa-exclamation-triangle text-danger"></span>&nbsp;<span translate>Connection Type</span></th>
                       <td class="text-right">{{connections[deviceCfg.deviceID].type}}</td>
