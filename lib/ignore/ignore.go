@@ -444,6 +444,7 @@ func parseIgnoreFile(fs fs.Filesystem, fd io.Reader, currentFile string, cd Chan
 
 	scanner := bufio.NewScanner(fd)
 	var err error
+	
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())
 		lines = append(lines, line)
@@ -497,6 +498,19 @@ func parseIgnoreFile(fs fs.Filesystem, fd io.Reader, currentFile string, cd Chan
 		if err != nil {
 			return nil, nil, err
 		}
+	}
+	
+	// Terrible hack added by Wowfunhappy: Additional system garbage files that should always be ignored.
+	if runtime.GOOS == "darwin" {
+		addPattern("(?d).DS_Store")
+		addPattern("(?d).Trash*")
+		addPattern("(?d).*-V100")
+		addPattern("(?d).fseventsd")
+		addPattern("(?d).TemporaryItems")
+	}
+	if runtime.GOOS == "windows" {
+		addPattern("(?d)desktop.ini")
+		addPattern("(?d)Thumbs.db")
 	}
 
 	return lines, patterns, nil
